@@ -1,8 +1,17 @@
+---
+title: Hexo博客搭建记录
+date: 2016-04-07
+categories: programming
+tags: [hexo, github, travis ci]
+---
+
 # 环境搭建
 
 Bash环境(Linux/Unix系统), Github账号, Ruby, git, nodejs,TravisCI账号
 
 这里以Ubuntu 14.04系统为例，进行安装依赖项：
+
+<!--more-->
 
 ### 安装基本软件
 
