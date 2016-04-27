@@ -18,7 +18,7 @@ categories: other
 
 ### 创建空间
 
-前往https://portal.qiniu.com/create/bucket页，创建一个新的空间
+前往[https://portal.qiniu.com/create/bucket](https://portal.qiniu.com/create/bucket)页，创建一个新的空间
 
 ![](http://7xsp5k.com1.z0.glb.clouddn.com/chrome_2016-04-27_09-37-19.png)
 
