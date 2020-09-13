@@ -1,0 +1,704 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/blog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/blog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=0.5.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="测试,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico?v=0.5.0">
+
+
+
+
+
+
+<meta name="description" content="多选题(有1个或1个以上答案)： 下面的说法正确的是:  AC    A. 所有软件项目的根本指导原则是软件要易于修改 p7    B. 测试人员负责自动化测试和单元测试  p6 单元和验收    C. 如果希望自己的软件灵活可变, 那就应该时常修改它 p7    D. 瀑布式开发是目前流行的开发方式 p10">
+<meta name="keywords" content="测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Clean Coder 答题">
+<meta property="og:url" content="http://jsntxzx.github.io/blog/2016/04/18/clean_coder/index.html">
+<meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="多选题(有1个或1个以上答案)： 下面的说法正确的是:  AC    A. 所有软件项目的根本指导原则是软件要易于修改 p7    B. 测试人员负责自动化测试和单元测试  p6 单元和验收    C. 如果希望自己的软件灵活可变, 那就应该时常修改它 p7    D. 瀑布式开发是目前流行的开发方式 p10">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-09-13T08:03:34.330Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clean Coder 答题">
+<meta name="twitter:description" content="多选题(有1个或1个以上答案)： 下面的说法正确的是:  AC    A. 所有软件项目的根本指导原则是软件要易于修改 p7    B. 测试人员负责自动化测试和单元测试  p6 单元和验收    C. 如果希望自己的软件灵活可变, 那就应该时常修改它 p7    D. 瀑布式开发是目前流行的开发方式 p10">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Clean Coder 答题 | 我的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">我的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Clean Coder 答题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-18T00:00:00+08:00" content="2016-04-18">
+              2016-04-18
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/blog/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">programming</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/04/18/clean_coder/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/18/clean_coder/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>多选题(有1个或1个以上答案)：</strong></p>
+<p>下面的说法正确的是:  AC</p>
+<p>   A. 所有软件项目的根本指导原则是软件要易于修改 p7</p>
+<p>   B. 测试人员负责自动化测试和单元测试  p6 单元和验收</p>
+<p>   C. 如果希望自己的软件灵活可变, 那就应该时常修改它 p7</p>
+<p>   D. 瀑布式开发是目前流行的开发方式 p10</p>
+<a id="more"></a>
+<hr>
+<p>对于下面的对话, 正确的说法是: D p19</p>
+<p>Mike:”Paula, 你在明天之前要完成那个登陆页面.”</p>
+<p>Paula:”噢,抱歉Mike, 这么短时间完成不了的.”</p>
+<p>Mike:”那你觉得什么时候能完成呢?”</p>
+<p>Paula:”在过两周怎么样.”</p>
+<p>Mike:(在他的本子上记了几笔）”好的, 谢谢.” </p>
+<p>A. Mike的做法专业</p>
+<p>B.Paula的做法专业</p>
+<p>C. 他们的做法都专业</p>
+<p>D. 他们的做法都不专业 </p>
+<hr>
+<p>假设你开发一个模块，按照你的估计还需要一个月。这时你的经理和你说两个星期后要完成所有的功能，因为要给顾客做demo，这个客户很重要。下面的做法正确的是: D</p>
+<p>A.我会试试尽量两周完成</p>
+<p>B.这么短时间一定完不成，但我会加班加点两周做好</p>
+<p>C.这个任务完成不了</p>
+<p>D.两个星期不可能完成所有功能，但我们商量下哪些功能对demo是必需的，把这些功能两周内实现好</p>
+<hr>
+<p>假设你参加一个项目，明天就要交付给顾客使用。QA在做最后一轮测试，突然一个的bug出现了，问题出在你负责的模块，这个bug是在一些特定情境下出现的。你仔细检查了下bug, 发现这个bug可以解但要改动很多。下面的做法正确的是：C</p>
+<p>A.赶紧改代码并提交给QA测试</p>
+<p>B.和QA解释这个bug出现的可能性，要解的话改动很大并有可能引入其他问题，不建议解这个bug</p>
+<p>C.和QA解释改的代码多，需要更多的时间改代码和测试，并且建议延期交付给顾客</p>
+<p>D. 和QA解释改的代码多，并建议加班来改代码和测试，以保证按时交付</p>
+<hr>
+<p>下面哪些编码方法是正确的: E</p>
+<p>A.为了尽快完成任务每天加班到很晚不停的写代码</p>
+<p>B.已经很困了，泡杯茶或咖啡提神继续写代码</p>
+<p>C.放些轻音乐，边听音乐边写代码</p>
+<p>D.我现在的状态很好，我会尽量保持这种状态多写代码</p>
+<p>E.以上都不是</p>
+<hr>
+<p>下面哪几项是测试驱动开发的法则: ABD</p>
+<p>A.在编好失败单元测试前，不要编写任何产品代码</p>
+<p>B.只要有一个单元测试失败了，就不要再写测试代码；无法通过编译也是一种失败情况</p>
+<p>C.写产品代码前规划好单元测试，所有的测试代码写完了再写产品代码</p>
+<p>D.产品代码恰好能够让当前失败的单元测试成功通过即可，不要多写</p>
+<hr>
+<p>下面关于书中”验收测试”的说法正确的是: D</p>
+<p>A.验收测试就是在接受正式发布前由用户执行的程序</p>
+<p>B.验收测试是QA编写的</p>
+<p>C.验收测试是业务方写给业务方的</p>
+<p>D.验收测试是在系统外部，通常是在API或UI级别进行的</p>
+<hr>
+<p>下面关于番茄工作法的说法正确的是: ABCD</p>
+<p>A.一般设定25分钟的定时器，这期间不要让任何事情干扰你的工作，如会议，电话等</p>
+<p>B.每完成4个番茄时间段时间，休息30分钟</p>
+<p>C.一天中有12到14个番茄时间段算是好的情况</p>
+<p>D.一天中有2到3个番茄时间段是糟糕的情况</p>
+<hr>
+<p>下面关于预估任务的说法正确的是: BCD</p>
+<p>A.”德尔菲法”是指一组人集合起来，为某项任务预估时间，取所有人的平均值</p>
+<p>B.”大数定律”是指把大的任务分成多个小任务，分开预估在加总和，结果会比单独评估大的任务准确很多</p>
+<p>C.专业人员一旦做了承诺，就会提供确定的数字，按时兑现</p>
+<p>D.预估是一种猜测，预估错误无关声誉</p>
+<hr>
+<p>下面关于工具的说法正确的是:AD</p>
+<p>A.在git中没有主干分支，每个开发人员在本机上有完整的项目历史，在本地副本上进行签入签出操作，需要时可以和其他人的分支版本进行合并</p>
+<p>B.Vi是一个通用编辑器，它具有Lisp模型</p>
+<p>C.Emacs是一个强大的IDE, 可以编辑调试代码</p>
+<p>D. JUnit, NUnit, CppUTest都是单元测试工具</p>
+<hr>
+<p><strong>单选题/判断题：</strong></p>
+<p>根据计划评审技术（PERT，Project Evaluation and Review Technique），假设项目中的某个模块完成大概需要6天，乐观来说需要4天，在最糟糕情况下需要14天，那么该模块按照PERT，预估完成天数最接近（）天 B</p>
+<p>A. 6              B. 7        C. 8        D. 9</p>
+<hr>
+<p>下面哪个不属于代码库管理软件工具（） D</p>
+<p>A. CVS         B. Git             C.SVN          D. VIM</p>
+<hr>
+<p>下面哪个不属于测试驱动开发的三项法则（）C</p>
+<p>A. 在编好失败单元测试之前，不要编写任何产品代码</p>
+<p>B. 只要有一个单元测试失败了，就不要再继续写测试代码</p>
+<p>C. 无法通过编译时候，也要继续写代码，直到覆盖所有的测试用例</p>
+<p>D. 产品代码恰好能够让当前失败的单元测试成功通过即可，不要多写</p>
+<hr>
+<p>下面哪些工具可以用来做自动化验收测试（）D</p>
+<p>A. cuke4duke</p>
+<p>B. robotframework</p>
+<p>C. Selenium</p>
+<p>D. 以上都是</p>
+<hr>
+<p>时间管理中，在包含工资、福利、设备损耗因素下，会议的成本大概是每人每小时（）美元C</p>
+<p>A. 50</p>
+<p>B. 100</p>
+<p>C. 200</p>
+<p>D. 500</p>
+<hr>
+<p>有凝聚力的团队人数以多少人最好（）C</p>
+<p>A. 5</p>
+<p>B. 8</p>
+<p>C. 12</p>
+<p>D. 20</p>
+<hr>
+<p>结对编程是代码复查最好的方式，对还是错？对</p>
+<hr>
+<p>对于自动化测试，下面哪个观点是错误的（）B</p>
+<p>A. 单元测试是支撑自动化测试金字塔的底部</p>
+<p>B. 组件测试不属于验收测试</p>
+<p>C. 集成测试一般由系统架构师编写</p>
+<p>D. 系统测试是针对整个集成完毕的系统来运行的自动化测试</p>
+<hr>
+<p>在遇到压力时，应该如何应对（）D</p>
+<p>A. 不要惊慌失措</p>
+<p>B. 要多与团队和主管沟通，并寻求帮助</p>
+<p>C. 坚信纪律原则</p>
+<p>D. 以上都对</p>
+<hr>
+<p>下面哪个不是编码的基本要求（）B</p>
+<p>A. 代码能够正常工作，并解决客户提出的问题</p>
+<p>B. 代码要越精炼越好</p>
+<p>C. 易懂，其他程序员能够读懂你的代码</p>
+<p>D. 代码必须和现有系统结合的天衣无缝</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/测试/" rel="tag">#测试</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2016/04/11/软件测试方法和技术answer/" rel="next" title="软件测试方法与技术 答题">
+                <i class="fa fa-chevron-left"></i> 软件测试方法与技术 答题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/04/27/使用ShareX和QiniuMonitor构建markdown图床/" rel="prev" title="使用ShareX和QiniuMonitor构建markdown图床">
+                使用ShareX和QiniuMonitor构建markdown图床 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/18/clean_coder/" data-title="Clean Coder 答题" data-url="http://jsntxzx.github.io/blog/2016/04/18/clean_coder/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="http://7xsp5k.com2.z0.glb.clouddn.com/avtar.png" alt="Zx Xiang">
+          <p class="site-author-name" itemprop="name">Zx Xiang</p>
+          <p class="site-description motion-element" itemprop="description">梦在前方，路在脚下</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/blog/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/blog/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/blog/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zx Xiang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/blog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/blog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/blog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/blog/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/blog/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/blog/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jsntxzx"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
